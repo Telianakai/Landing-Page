@@ -65,6 +65,11 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+
+.active {
+    background: rgb(205,0,255,1);
+    color: rgba(0,0,102,1);
+}
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
@@ -91,6 +96,10 @@ section {
     transition: ease 0.5s all;
 }
 
+.navbar__menu .menu__link:active {
+    background: white;
+    color: rgba(0,0,102,1);
+}
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -118,7 +127,7 @@ section {
 .landing__container {
     padding: 1em;
     text-align: left;
-    background: rgb(0,0,102,1);
+    background: rgba(0,0,102,.1);
     background: linear-gradient(100deg, rgba(0,0,102,1) 0%, rgba(205, 0, 255, 1) 180%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border: 10px solid transparent;
@@ -200,13 +209,12 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.active-section {
     background: rgb(10, 10, 10);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 section.active-section .landing__container::before {
